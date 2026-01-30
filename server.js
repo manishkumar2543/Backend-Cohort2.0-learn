@@ -1,19 +1,7 @@
-const express=require('express');
+const app=require('./src/app');
 
-const app=express();
-app.use(express.json())
 
-const notes=[];
 
-app.post('/notes',(req,res)=>{
-    console.log(req.body);
-    notes.push(req.body)
-    res.send('Note created successfully');
-})
-
-app.get('/notes',(req,res)=>{
-    res.send(notes)
-})
 
 
 
